@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.scss';
 import Header from '../Header/index.js'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom';
+import HomePage from '../HomePage';
 
 function App() {
   return (
@@ -9,13 +10,13 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <HomePage />
         </Route>
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/dashboard">
-          <Dashboard />
+        <Route path="/home">
+          <HomePage />
         </Route>
       </Switch>
     </div>
@@ -23,26 +24,11 @@ function App() {
 }
 
 export default App;
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-    </div>
-  );
-}
 
 function About() {
   return (
     <div>
       <h2>About</h2>
-    </div>
-  );
-}
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
     </div>
   );
 }
