@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <Root />
         </Route>
         <Route path="/about">
           <About />
@@ -29,6 +29,13 @@ function About() {
   return (
     <div>
       <h2>About</h2>
+    </div>
+  );
+}
+function Root() {
+  return (
+    <div>
+      <h2>Root</h2>
     </div>
   );
 }

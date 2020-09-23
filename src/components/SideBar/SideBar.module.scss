@@ -2,6 +2,8 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 $top: 4rem;
+
+
 .sidebar {
     background-color: #f7f7f7;
     position: sticky;
@@ -9,4 +11,21 @@ $top: 4rem;
         top: $top;
         height: calc(100vh - #{$top});
     }
+    .board{
+        text-align: left;
+        line-height: 50px;
+    }
+    .menuButton{
+        color: #212529;
+        float: right;
+        margin: 10px;
+
+    }
+    .widthScreen {
+        @include media-breakpoint-up(md) {
+            display: block !important;
+            height: 100% !important;
+        }
+    }
+
 }
