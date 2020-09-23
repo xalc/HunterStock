@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+$top: 4rem;
+.sidebar {
+    background-color: #f7f7f7;
+    position: sticky;
+    @include media-breakpoint-up(md) {
+        top: $top;
+        height: calc(100vh - #{$top});
+    }
+}

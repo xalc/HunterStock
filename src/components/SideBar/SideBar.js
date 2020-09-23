@@ -1,10 +1,11 @@
 import React from 'react';
-
+import cx from 'classnames';
+import styles from './SideBar.module.scss';
 function SideBar(props) {
     return (
        <div 
-       {...props}
-       className='bg-secondary'
+        className = {cx(props.className,styles.sidebar )}
+
         >DashBoard</div> 
     );
 
