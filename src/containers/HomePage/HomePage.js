@@ -12,7 +12,6 @@ function HellotPage() {
 function HomePage() {
     let { path } = useRouteMatch();
     return (
-        <>
             <Container fluid>
                 <Row className="flex-xl-nowrap">
                     <Col as={SideBar} sm={12} md={3} xl={2}> </Col>
@@ -36,8 +35,6 @@ function HomePage() {
                     </Col>
                 </Row>
             </Container>
-            
-        </>
     );
   }
   

@@ -18,6 +18,12 @@ function App() {
         <Route path="/home">
           <HomePage />
         </Route>
+        <Route path="/tech">
+          <Tech />
+        </Route>
+        <Route path="/blog">
+          <Blog />
+        </Route>
       </Switch>
     </div>
   );
@@ -36,6 +42,19 @@ function Root() {
   return (
     <div>
       <h2>Root</h2>
+    </div>
+  );
+}
+function Tech() {
+  return (
+    <div>
+      <h2>技术</h2>
+    </div>
+  );
+}function Blog() {
+  return (
+    <div>
+      <h2>文章</h2>
     </div>
   );
 }

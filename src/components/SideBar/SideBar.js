@@ -20,9 +20,11 @@ class SideBar extends Component  {
         };
     }
     handleCollapse = () => {
+        console.log('handle collapse');
         this.setState( (prevState) => ({collapsed: !prevState.collapsed}));
     }
     closeCollapse = () => {
+        console.log('close collapse');
         this.setState({collapsed: false});
     }
     render() {
@@ -44,8 +46,12 @@ class SideBar extends Component  {
 
                     <OverflowWrapper >
                         <Nav defaultActiveKey="/hello" className="flex-column" onSelect={this.closeCollapse}>
-                            <Nav.Link as={NavLink} to={`${this.props.match.url}/hello`}>Hello</Nav.Link>
-                            <Nav.Link as={NavLink} to={`${this.props.match.url}/test`}>Test</Nav.Link>
+                        <Nav.Item>
+                            <Nav.Link as={NavLink} to={`${this.props.match.url}/hello`} href='/'>Hello</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link as={NavLink} to={`${this.props.match.url}/test`} href='/'>Test</Nav.Link>
+                        </Nav.Item>
                         </Nav>
                     </OverflowWrapper>
 
