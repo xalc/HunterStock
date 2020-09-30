@@ -3,7 +3,7 @@ import './App.scss';
 import Header from '../Header/index.js'
 import { Switch, Route } from 'react-router-dom';
 import HomePage from '../HomePage';
-
+import BlogPage from '../BlogPage'
 function App() {
   return (
     <div className="App">
@@ -22,7 +22,7 @@ function App() {
           <Tech />
         </Route>
         <Route path="/blog">
-          <Blog />
+          <BlogPage />
         </Route>
       </Switch>
     </div>
@@ -49,12 +49,6 @@ function Tech() {
   return (
     <div>
       <h2>技术</h2>
-    </div>
-  );
-}function Blog() {
-  return (
-    <div>
-      <h2>文章</h2>
     </div>
   );
 }
