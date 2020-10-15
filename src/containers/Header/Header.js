@@ -12,10 +12,10 @@ function Header() {
 
             <Navbar.Collapse >
                 <Nav className="mr-auto">  
-                    <Nav.Link as= {Link} to="/about" href='/'>关于</Nav.Link>
                     <Nav.Link as= {Link} to="/home" href='/'>Home</Nav.Link>
                     <Nav.Link as= {Link} to="/tech" href='/'>技术</Nav.Link>
                     <Nav.Link as= {Link} to="/blog" href='/'>文章</Nav.Link>
+                    <Nav.Link as= {Link} to="/about" href='/'>关于</Nav.Link>
                     {/* if no hrer attr the collapseOnselect will not work... */}
                 </Nav>
             </Navbar.Collapse>

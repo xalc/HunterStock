@@ -1,22 +1,24 @@
-import React from 'react';
+import React, {lazy, Component, Suspense} from 'react';
 
-import { Container, Row, Col} from 'react-bootstrap';
+// import { Container, Row, Col} from 'react-bootstrap';
 
-import sytles from './Blog.module.scss';
-import {MDXProvider} from '@mdx-js/react'
+// import sytles from './Blog.module.scss';
+// import {MDXProvider} from '@mdx-js/react'
 import {importMDX} from 'mdx.macro'
-const Test = importMDX('./Test.md')
-const components = {
+const Content = lazy(() => importMDX('./Test.mdx'))
 
-    h2: (props) => <h2 style= {{'color': 'red'}} {...props} />,
-   
-  };
+
+
 
 function Blog (props) {
 
     return (
         // <MDXProvider components={components}><Test /></MDXProvider>
-        <Test></Test>
+        <div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Content />
+        </Suspense>
+      </div>
 );
 };
 export default Blog;
